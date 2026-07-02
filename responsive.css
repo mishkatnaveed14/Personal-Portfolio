@@ -1,77 +1,83 @@
 /* ---------- Responsive ---------- */
 @media (max-width: 1024px) {
-  .hero-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+    .hero-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
-  .hero-cta,
-  .stats {
-    justify-content: center;
-    margin-inline: auto;
-  }
+    .hero-cta,
+    .stats {
+        justify-content: center;
+        margin-inline: auto;
+    }
 
-  .hero-intro {
-    margin-inline: auto;
-  }
+    .hero-intro {
+        margin-inline: auto;
+    }
 
-  .hero-visual {
-    order: -1;
-  }
+    .hero-visual {
+        order: -1;
+        width: 100%;
+        display: grid;
+        place-items: center;
+    }
 
-  .about-grid {
-    grid-template-columns: 1fr;
-  }
+    .avatar-wrap {
+        margin-inline: auto;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
+    .nav-links {
+        display: none;
+    }
 
-  .hamburger {
-    display: flex;
-  }
+    .hamburger {
+        display: flex;
+    }
 
-  .section {
-    padding-block: var(--space-5);
-  }
+    .section {
+        padding-block: var(--space-5);
+    }
 
-  .stats {
-    grid-template-columns: 1fr 1fr;
-  }
+    .stats {
+        grid-template-columns: 1fr 1fr;
+    }
 }
 
 @media (max-width: 480px) {
-  .container {
-    width: min(100% - 1.75rem, var(--maxw));
-  }
+    .container {
+        width: min(100% - 1.75rem, var(--maxw));
+    }
 
-  .hero-cta .btn {
-    width: 100%;
-  }
+    .hero-cta .btn {
+        width: 100%;
+    }
 
-  .stats {
-    grid-template-columns: 1fr;
-  }
+    .stats {
+        grid-template-columns: 1fr;
+    }
 
-  .stat-wide {
-    grid-column: span 1;
-  }
+    .stat-wide {
+        grid-column: span 1;
+    }
 
-  .contact-actions .btn {
-    width: 100%;
-  }
+    .contact-actions .btn {
+        width: 100%;
+    }
 
-  .footer-inner {
-    flex-direction: column;
-    text-align: center;
-  }
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
 @media (min-width: 1440px) {
-  :root {
-    --maxw: 1280px;
-  }
+    :root {
+        --maxw: 1280px;
+    }
 }
-
