@@ -128,7 +128,6 @@ ul {
   color: transparent;
 }
 
-/* ---------- Glass ---------- */
 .glass {
   background: var(--surface);
   border: 1px solid var(--border);
@@ -206,7 +205,6 @@ ul {
   pointer-events: none;
 }
 
-/* ---------- Scroll progress ---------- */
 .scroll-progress {
   position: fixed;
   top: 0;
@@ -253,7 +251,7 @@ ul {
   }
 }
 
-/* ---------- Navbar ---------- */
+/* ----------Nav-------- */
 .navbar {
   position: fixed;
   inset: 0 0 auto 0;
@@ -408,7 +406,7 @@ ul {
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobile drawer */
+/* Mobile */
 .drawer-backdrop {
   position: fixed;
   inset: 0;
@@ -655,7 +653,7 @@ ul {
   font-size: 1.05rem;
 }
 
-/* Avatar */
+/*image mine */
 .hero-visual {
   display: grid;
   place-items: center;
