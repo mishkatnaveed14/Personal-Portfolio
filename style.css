@@ -1000,7 +1000,6 @@ ul {
   height: 100%;
   object-fit: cover;
   transition: transform 0.6s var(--ease);
-  /* mix-blend-mode: luminosity; */
   opacity: 0.9;
 }
 
@@ -1044,7 +1043,7 @@ ul {
   gap: 0.6rem;
 }
 
-/* ---------- Timeline ---------- */
+/* ---------- Stats ---------- */
 .timeline {
   position: relative;
   max-width: 760px;
@@ -1234,29 +1233,6 @@ ul {
   transform: translateY(0);
 }
 
-/* ---------- Toast ---------- */
-.toast {
-  position: fixed;
-  bottom: 1.5rem;
-  left: 50%;
-  transform: translate(-50%, 120%);
-  background: var(--surface-strong);
-  border: 1px solid var(--border);
-  -webkit-backdrop-filter: blur(14px);
-  backdrop-filter: blur(14px);
-  padding: 0.85rem 1.4rem;
-  border-radius: 12px;
-  font-size: 0.9rem;
-  box-shadow: var(--shadow);
-  z-index: 400;
-  transition: transform 0.4s var(--ease);
-}
-
-.toast.show {
-  transform: translate(-50%, 0);
-}
-
-/* ---------- Reveal animation ---------- */
 .reveal {
   opacity: 0;
   transform: translateY(36px);
@@ -1345,7 +1321,6 @@ ul {
   }
 }
 
-/* ---------- Reduced motion ---------- */
 @media (prefers-reduced-motion: reduce) {
 
   *,
