@@ -1,14 +1,12 @@
 
 "use strict";
-
-/* Helper */
 const $ = (sel, ctx = document) => ctx.querySelector(sel);
 const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 const prefersReduced = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
 ).matches;
 
-/* ---------- Theme toggle (persisted) ---------- */
+/* ---------- Theme toggle ---------- */
 (function themeInit() {
   const root = document.documentElement;
   const toggle = $("#themeToggle");
@@ -22,10 +20,10 @@ const prefersReduced = window.matchMedia(
   });
 })();
 
-/* ---------- Year ---------- */
+
 $("#year").textContent = new Date().getFullYear();
 
-/* ---------- Navbar scroll state + progress bar ---------- */
+/* ---------- Navbar scroll state ---------- */
 (function scrollUI() {
   const navbar = $("#navbar");
   const progress = $("#scrollProgress");
@@ -47,7 +45,6 @@ $("#year").textContent = new Date().getFullYear();
   );
 })();
 
-/* ---------- Mobile drawer ---------- */
 (function drawer() {
   const burger = $("#hamburger");
   const drawer = $("#mobileDrawer");
@@ -74,7 +71,7 @@ $("#year").textContent = new Date().getFullYear();
   );
 })();
 
-/* ---------- Smooth anchor scroll ---------- */
+/* ---------- scroll ---------- */
 $$('a[href^="#"]').forEach((a) => {
   a.addEventListener("click", (e) => {
     const id = a.getAttribute("href");
@@ -87,7 +84,7 @@ $$('a[href^="#"]').forEach((a) => {
   });
 });
 
-/* ---------- Active section highlight ---------- */
+/* ----------  highlight ---------- */
 (function activeNav() {
   const sections = $$("main section[id]");
   const links = $$(".nav-link");
@@ -111,7 +108,7 @@ $$('a[href^="#"]').forEach((a) => {
   sections.forEach((s) => io.observe(s));
 })();
 
-/* ---------- Reveal on scroll + skill bars ---------- */
+/* ---------- skill bars ---------- */
 (function reveal() {
   const io = new IntersectionObserver(
     (entries) => {
@@ -218,7 +215,7 @@ $$('a[href^="#"]').forEach((a) => {
   });
 })();
 
-/* ---------- Ripple buttons ---------- */
+/* ---------- buttons ---------- */
 $$(".ripple").forEach((btn) => {
   btn.addEventListener("click", (e) => {
     const rect = btn.getBoundingClientRect();
@@ -271,7 +268,7 @@ $$(".ripple").forEach((btn) => {
   });
 })();
 
-/* ---------- Floating particles canvas ---------- */
+/* ---------- Floating particle ---------- */
 (function particles() {
   if (prefersReduced) return;
   const canvas = $("#particles");
@@ -310,7 +307,7 @@ $$(".ripple").forEach((btn) => {
       ctx.globalAlpha = 0.5;
       ctx.fill();
     }
-    // connections
+  
     ctx.globalAlpha = 0.12;
     ctx.strokeStyle = color;
     for (let i = 0; i < dots.length; i++) {
@@ -335,7 +332,7 @@ $$(".ripple").forEach((btn) => {
   draw();
 })();
 
-/* ---------- Parallax float icons on mouse ---------- */
+/* --------- icons on mouse ---------- */
 (function parallax() {
   if (window.matchMedia("(hover: none)").matches || prefersReduced) return;
   const icons = $$(".float-icon");
