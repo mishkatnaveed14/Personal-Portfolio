@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio repository! This project is a modern, responsive, and performance-optimized portfolio website designed to showcase my skills, frontend craft, learning journey, and selected web development projects.
 
-🔗 **Live Demo:** [portfolio2098.netlify.app](https://portfolio2098.netlify.app)
+🔗 **Live Demo:** [https://mishkatnaveed14.github.io/Personal-Portfolio/]
 
 ---
 
