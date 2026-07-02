@@ -9,7 +9,6 @@
   --border: rgba(255, 255, 255, 0.1);
   --text: #eef1f8;
   --text-muted: #9aa3b8;
-
   /* Type */
   --font-head: "Sora", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
@@ -89,7 +88,6 @@ ul {
   border-radius: 6px;
 }
 
-/* ---------- Layout ---------- */
 .container {
   width: min(100% - 2.5rem, var(--maxw));
   margin-inline: auto;
