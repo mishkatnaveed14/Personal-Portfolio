@@ -2,8 +2,6 @@
   --brand: #6c8cff;
   --brand-2: #00c2a8;
   --brand-glow: rgba(108, 140, 255, 0.45);
-
-  /* Dark theme (default) */
   --bg: #070912;
   --bg-2: #0c1020;
   --surface: rgba(255, 255, 255, 0.05);
@@ -15,15 +13,12 @@
   /* Type */
   --font-head: "Sora", system-ui, sans-serif;
   --font-body: "Inter", system-ui, sans-serif;
-
-  /* Spacing scale */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
   --space-5: 3rem;
   --space-6: 5rem;
-
   --radius: 18px;
   --radius-sm: 12px;
   --maxw: 1200px;
