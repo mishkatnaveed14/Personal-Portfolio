@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mishkat Naveed — Frontend Developer & Future Agentic AI Engineer</title>
+  <meta name="description"
+    content="Premium portfolio of Mishkat Naveed, a frontend developer building fast, responsive, user-focused web applications while growing into Python and Agentic AI engineering." />
+  <meta name="keywords"
+    content="Frontend Developer, Web Developer, JavaScript, TypeScript, Python, Agentic AI, Prompt Engineering, Portfolio, UI Developer, Responsive Design" />
+  <meta name="author" content="Mishkat Naveed" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mishkat Naveed — Frontend Developer & Future Agentic AI Engineer" />
+  <meta property="og:description"
+    content="Building modern, high-performance web experiences and intelligent AI solutions." />
+  <meta property="og:image" content="og-image.png" />
+  <meta property="og:url" content="https://example.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon (inline SVG) -->
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>%E2%9A%A1</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Animated background layers -->
+  <div class="bg-animation" aria-hidden="true">
+    <div class="gradient-blob blob-1"></div>
+    <div class="gradient-blob blob-2"></div>
+    <div class="gradient-blob blob-3"></div>
+  </div>
+  <div class="noise" aria-hidden="true"></div>
+  <canvas class="particles" id="particles" aria-hidden="true"></canvas>
+
+  <!-- Custom cursor -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner" aria-label="Primary">
+      <a href="#hero" class="logo" aria-label="Home">
+        <span class="logo-mark">MN</span>
+        <span class="logo-text">Mishkat<b>.</b>dev</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#timeline" class="nav-link">Journey</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
+          <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path
+              d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+          </svg>
+          <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+          </svg>
+        </button>
+
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"
+          aria-controls="mobileDrawer">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" id="mobileDrawer" aria-label="Mobile navigation">
+    <nav class="drawer-links">
+      <a href="#hero" class="drawer-link">Home</a>
+      <a href="#about" class="drawer-link">About</a>
+      <a href="#skills" class="drawer-link">Skills</a>
+      <a href="#projects" class="drawer-link">Projects</a>
+      <a href="#timeline" class="drawer-link">Journey</a>
+      <a href="#services" class="drawer-link">Services</a>
+      <a href="#contact" class="drawer-link">Contact</a>
+    </nav>
+  </aside>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Available for freelance & full-time</span>
+          <h1 class="hero-title">
+            Frontend Developer &amp;
+            <span class="gradient-text">Future Agentic AI Engineer</span>
+          </h1>
+
+          <p class="hero-typing">
+            <span class="typing-prefix">I'm </span>
+            <span class="typed-text" id="typedText"></span>
+            <span class="cursor-blink">|</span>
+          </p>
+
+          <p class="hero-intro">
+            I build fast, responsive and user-focused web applications while
+            expanding into Python and Agentic AI to create intelligent software
+            that solves real-world problems.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary ripple">View Projects</a>
+            <a href="resume.pdf" class="btn btn-ghost ripple" download>Download Resume</a>
+            <a href="#contact" class="btn btn-ghost ripple">Contact Me</a>
+          </div>
+
+          <div class="stats">
+            <div class="stat-card glass">
+              <span class="stat-num" data-count="10">0</span><span class="stat-plus">+</span>
+              <p>Projects</p>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num" data-count="7">0</span><span class="stat-plus">+</span>
+              <p>Technologies</p>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-num" data-count="100">0</span><span class="stat-plus">%</span>
+              <p>Responsive</p>
+            </div>
+            <div class="stat-card glass stat-wide">
+              <span class="stat-live">● Currently</span>
+              <p>Learning Agentic AI</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="avatar-wrap">
+            <div class="avatar-glow"></div>
+            <div class="avatar-ring"></div>
+            <img class="avatar"
+              src="./my_image.jpeg"
+              alt="Portrait of Alex Rahman" loading="eager" width="320" height="320" />
+            <!-- Floating tech icons -->
+        
+            <span class="float-icon fi-1" title="JavaScript">JS</span>
+            <span class="float-icon fi-2" title="TypeScript">TS</span>
+            <span class="float-icon fi-3" title="Python">Py</span>
+            <span class="float-icon fi-4" title="HTML">HTML</span>
+            <span class="float-icon fi-5" title="CSS">CSS</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-hint" aria-label="Scroll to about">
+        <span class="mouse"><span class="wheel"></span></span>
+      </a>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">01 — About</span>
+          <h2 class="section-title">A developer who cares about <span class="gradient-text">craft</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              I specialize in building responsive, high-performance web
+              applications with modern frontend technologies. My passion lies in
+              creating clean user experiences while continuously expanding my
+              knowledge in Python and Agentic AI to build intelligent digital
+              solutions.
+            </p>
+            <p>
+              I treat every interface as a product: obsessing over spacing,
+              motion, accessibility and load performance so the end result feels
+              effortless. Lately I've been going deeper into autonomous agents
+              and prompt engineering to bridge great design with intelligent
+              automation.
+            </p>
+            <ul class="about-list">
+              <li>Clean, maintainable and well-documented code</li>
+              <li>Pixel-precise, accessible interfaces</li>
+              <li>Performance-first mindset (Lighthouse 95+)</li>
+              <li>Continuous learner exploring Agentic AI</li>
+            </ul>
+          </div>
+
+          <div class="about-panel glass reveal">
+            <div class="about-panel-row"><span>Name</span><b>Mishkat Naveed</b></div>
+            <div class="about-panel-row"><span>Role</span><b>Frontend Developer</b></div>
+            <div class="about-panel-row"><span>Focus</span><b>Web &amp; Agentic AI</b></div>
+            <div class="about-panel-row"><span>Location</span><b>Remote / Worldwide</b></div>
+            <div class="about-panel-row"><span>Status</span><b class="status-open">Open to work</b></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">02 — Skills</span>
+          <h2 class="section-title">Tools I use to <span class="gradient-text">build &amp; ship</span></h2>
+        </header>
+
+        <div class="skills-groups">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">Frontend</h3>
+            <div class="skill-cards">
+              <article class="skill-card glass" data-level="95"><span class="skill-ic">&lt;/&gt;</span>
+                <h4>HTML</h4><span class="skill-lvl">Advanced</span>
+                <div class="bar"><i style="--w:95%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="92"><span class="skill-ic">#</span>
+                <h4>CSS</h4><span class="skill-lvl">Advanced</span>
+                <div class="bar"><i style="--w:92%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="90"><span class="skill-ic">JS</span>
+                <h4>JavaScript</h4><span class="skill-lvl">Advanced</span>
+                <div class="bar"><i style="--w:90%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="80"><span class="skill-ic">TS</span>
+                <h4>TypeScript</h4><span class="skill-lvl">Proficient</span>
+                <div class="bar"><i style="--w:80%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="95"><span class="skill-ic">▦</span>
+                <h4>Responsive Design</h4><span class="skill-lvl">Advanced</span>
+                <div class="bar"><i style="--w:95%"></i></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">Styling</h3>
+            <div class="skill-cards">
+              <article class="skill-card glass" data-level="88"><span class="skill-ic">~</span>
+                <h4>Tailwind CSS</h4><span class="skill-lvl">Proficient</span>
+                <div class="bar"><i style="--w:88%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="82"><span class="skill-ic">B</span>
+                <h4>Bootstrap</h4><span class="skill-lvl">Proficient</span>
+                <div class="bar"><i style="--w:82%"></i></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">Programming</h3>
+            <div class="skill-cards">
+              <article class="skill-card glass" data-level="70"><span class="skill-ic">Py</span>
+                <h4>Python</h4><span class="skill-lvl">Growing</span>
+                <div class="bar"><i style="--w:70%"></i></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">AI</h3>
+            <div class="skill-cards">
+              <article class="skill-card glass" data-level="65"><span class="skill-ic">◈</span>
+                <h4>Agentic AI</h4><span class="skill-lvl">Learning</span>
+                <div class="bar"><i style="--w:65%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="78"><span class="skill-ic">✦</span>
+                <h4>Prompt Engineering</h4><span class="skill-lvl">Proficient</span>
+                <div class="bar"><i style="--w:78%"></i></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">Tools</h3>
+            <div class="skill-cards">
+              <article class="skill-card glass" data-level="88"><span class="skill-ic">⎇</span>
+                <h4>Git</h4><span class="skill-lvl">Advanced</span>
+                <div class="bar"><i style="--w:88%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="88"><span class="skill-ic">GH</span>
+                <h4>GitHub</h4><span class="skill-lvl">Advanced</span>
+                <div class="bar"><i style="--w:88%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="92"><span class="skill-ic">▷</span>
+                <h4>VS Code</h4><span class="skill-lvl">Advanced</span>
+                <div class="bar"><i style="--w:92%"></i></div>
+              </article>
+              <article class="skill-card glass" data-level="80"><span class="skill-ic">◮</span>
+                <h4>Figma</h4><span class="skill-lvl">Proficient</span>
+                <div class="bar"><i style="--w:80%"></i></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">03 — Projects</span>
+          <h2 class="section-title">Selected <span class="gradient-text">work</span></h2>
+        </header>
+
+        <div class="projects-grid">
+          <article class="project-card glass reveal">
+            <div class="project-shot" style="--g:linear-gradient(135deg,#5b8cff,#7b5bff)">
+              <img src="./images/project1-image.png"
+                alt="Analytics dashboard interface" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Chartify Website</h3>
+              <p>A real-time analytics dashboard with customizable widgets, dark mode and fluid data visualisations.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Charts</span></div>
+              <div class="project-actions">
+                <a href="https://charity-website3456.netlify.app" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-primary ripple">Live Demo</a>
+                <a href="https://github.com/mishkatnaveed14" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-ghost ripple">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal">
+            <div class="project-shot" style="--g:linear-gradient(135deg,#00c2a8,#3a8bff)">
+              <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=800&auto=format&fit=crop"
+                alt="E-commerce storefront" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Aura Store</h3>
+              <p>A responsive e-commerce storefront with animated cart, filtering and a smooth checkout flow.</p>
+              <div class="tags"><span>TypeScript</span><span>CSS</span><span>API</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary ripple">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-ghost ripple">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal">
+            <div class="project-shot" style="--g:linear-gradient(135deg,#ff7a59,#ff5b8c)">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop"
+                alt="AI assistant interface" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Agent Playground</h3>
+              <p>An experimental UI for testing prompt chains and agentic workflows with a live response stream.</p>
+              <div class="tags"><span>Python</span><span>JS</span><span>Agentic AI</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary ripple">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-ghost ripple">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card glass reveal">
+            <div class="project-shot" style="--g:linear-gradient(135deg,#7b5bff,#00c2a8)">
+              <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=800&auto=format&fit=crop"
+                alt="Landing page design" loading="lazy" />
+            </div>
+            <div class="project-body">
+              <h3>Lumen Landing</h3>
+              <p>A high-converting product landing page with scroll-driven animations and a Lighthouse score of 98.</p>
+              <div class="tags"><span>HTML</span><span>CSS</span><span>GSAP-style</span></div>
+              <div class="project-actions">
+                <a href="#" class="btn btn-sm btn-primary ripple">Live Demo</a>
+                <a href="#" class="btn btn-sm btn-ghost ripple">GitHub</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="section" id="timeline">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">04 — Journey</span>
+          <h2 class="section-title">My learning <span class="gradient-text">roadmap</span></h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <h4>HTML</h4>
+              <p>Built a strong foundation in semantic, accessible markup.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <h4>CSS</h4>
+              <p>Mastered layouts, animations and modern responsive design.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <h4>JavaScript</h4>
+              <p>Learned the DOM, async patterns and interactive UI logic.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <h4>TypeScript</h4>
+              <p>Added type safety and scalable architecture to my apps.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-dot"></div>
+            <div class="tl-card glass">
+              <h4>Python</h4>
+              <p>Expanded into backend logic, scripting and automation.</p>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-dot tl-dot-active"></div>
+            <div class="tl-card glass">
+              <h4>Agentic AI</h4>
+              <p>Currently building intelligent, autonomous AI systems.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+        <header class="section-head reveal">
+          <span class="section-tag">05 — Services</span>
+          <h2 class="section-title">How I can <span class="gradient-text">help you</span></h2>
+        </header>
+
+        <div class="services-grid">
+          <article class="service-card glass reveal"><span class="svc-ic">▤</span>
+            <h3>Responsive Website Development</h3>
+            <p>Websites that look and feel great on every screen size.</p>
+          </article>
+          <article class="service-card glass reveal"><span class="svc-ic">◧</span>
+            <h3>Landing Page Development</h3>
+            <p>High-converting, fast-loading pages built to drive action.</p>
+          </article>
+          <article class="service-card glass reveal"><span class="svc-ic">&lt;/&gt;</span>
+            <h3>Frontend Development</h3>
+            <p>Clean, maintainable interfaces with modern best practices.</p>
+          </article>
+          <article class="service-card glass reveal"><span class="svc-ic">★</span>
+            <h3>Portfolio Website Design</h3>
+            <p>Personal sites that make you stand out to clients &amp; recruiters.</p>
+          </article>
+          <article class="service-card glass reveal"><span class="svc-ic">◑</span>
+            <h3>UI Implementation</h3>
+            <p>Turning Figma designs into pixel-perfect, live interfaces.</p>
+          </article>
+          <article class="service-card glass reveal"><span class="svc-ic">◈</span>
+            <h3>AI Learning Journey</h3>
+            <p>Exploring Agentic AI and prompt engineering as a service.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-card glass reveal">
+          <span class="section-tag">06 — Contact</span>
+          <h2 class="section-title">Let's build something <span class="gradient-text">great together</span></h2>
+          <p class="contact-sub">Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+          <div class="contact-actions">
+            <a href="mailto:hello@alexrahman.dev" class="btn btn-primary ripple">Email Me</a>
+            <button class="btn btn-ghost ripple" id="copyEmail" data-email="hello@alexrahman.dev">Copy Email</button>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn btn-ghost ripple">LinkedIn</a>
+            <a href="https://github.com" target="_blank" rel="noopener" class="btn btn-ghost ripple">GitHub</a>
+            <a href="resume.pdf" download class="btn btn-ghost ripple">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p class="footer-copy">© <span id="year"></span> Alex Rahman. All rights reserved.</p>
+      <div class="footer-social">
+        <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">GH</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">IN</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">X</a>
+      </div>
+      <p class="footer-built">Built with HTML, CSS &amp; JavaScript</p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
